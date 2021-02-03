@@ -21,3 +21,11 @@ class PromoSerializer(ModelSerializer):
     class Meta:
         model = Promo
         fields = "__all__"
+
+
+class PromoPointsSerializer(ModelSerializer):
+    promo_amount = serializers.IntegerField(min_value=1)
+
+    class Meta:
+        model = Promo
+        fields = ['promo_amount',]
