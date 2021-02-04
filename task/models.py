@@ -8,7 +8,7 @@ from django.db import models
 # Create your models here.
 class NormalUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(null=False,blank=False,max_length=30)
+    name = models.CharField(null=False, blank=False, max_length=30)
     mobile_number = models.CharField(max_length=30)
     address = models.CharField(max_length=45)
 
@@ -37,4 +37,4 @@ class Promo(models.Model):
     end_time = models.DateTimeField()
     promo_amount = models.IntegerField(validators=[MinValueValidator(Decimal('1'))])
     is_active = models.BooleanField(default=False)
-    description = models.CharField(max_length=45,blank=True)
+    description = models.CharField(max_length=45, blank=True)

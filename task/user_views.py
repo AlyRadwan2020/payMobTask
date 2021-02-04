@@ -9,6 +9,7 @@ from task.serializers import UserSerializer
 
 # Retrieve , Update and Destroy APIView
 class UserRUD(generics.RetrieveUpdateDestroyAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = NormalUser.objects.all()
     serializer_class = UserSerializer
 

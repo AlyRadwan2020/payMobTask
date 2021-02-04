@@ -28,4 +28,4 @@ class PromoPointsSerializer(ModelSerializer):
 
     class Meta:
         model = Promo
-        fields = ['promo_amount',]
+        fields = ['promo_amount', ]

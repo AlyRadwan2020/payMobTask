@@ -9,5 +9,4 @@ urlpatterns = [
     path('user/<int:pk>/', user_views.UserRUD.as_view(), name='RUD_user'),
     path('users/', user_views.UserListCreate.as_view(), name='List_create_promos'),
     path('promos/<int:pk>/points',promo_views.UserPromoPoints.as_view(),name='Get_promo_points'),
-    # path('/',views.use_promo_points,name='Use_promo_points'),
 ]
